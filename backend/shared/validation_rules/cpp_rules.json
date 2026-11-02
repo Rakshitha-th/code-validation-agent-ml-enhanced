@@ -1,0 +1,24 @@
+{
+  "language": "cpp",
+  "version": 1,
+  "rules": [
+    {
+      "id": "BUG005",
+      "matcher": "unconditional_loop",
+      "category": "bug",
+      "severity": "low",
+      "description": "An unconditional loop may not terminate unless its body exits or throws.",
+      "recommendation": "Verify that the loop has a reachable exit condition.",
+      "subcategory": "control_flow"
+    },
+    {
+      "id": "RES004",
+      "matcher": "unreleased_allocation",
+      "category": "resource",
+      "severity": "high",
+      "description": "A raw heap allocation has no matching delete in this function and may leak memory.",
+      "recommendation": "Prefer RAII-managed ownership or release the allocation with the matching delete form on every exit path.",
+      "subcategory": "memory_lifecycle"
+    }
+  ]
+}

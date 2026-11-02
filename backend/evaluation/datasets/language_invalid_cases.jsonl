@@ -1,0 +1,7 @@
+{"id":"javascript-invalid-syntax","language":"javascript","target":"validation","filename":"main.js","code":"const value = ;\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}
+{"id":"typescript-invalid-syntax","language":"typescript","target":"validation","filename":"main.ts","code":"const value: number = ;\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}
+{"id":"java-invalid-syntax","language":"java","target":"validation","filename":"Main.java","code":"public class Main { public static void main(String[] args) { System.out.println(\"broken\") } }\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}
+{"id":"c-invalid-syntax","language":"c","target":"validation","filename":"main.c","code":"int main( { return 0; }\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}
+{"id":"cpp-invalid-syntax","language":"cpp","target":"validation","filename":"main.cpp","code":"int main() { return ;\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}
+{"id":"go-invalid-syntax","language":"go","target":"validation","filename":"main.go","code":"package main\nfunc main( {\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}
+{"id":"csharp-invalid-syntax","language":"csharp","target":"validation","filename":"Program.cs","code":"public class Program { public static void Main( { } }\n","expected":{"status":"failed","valid":false,"minimum_findings":0}}

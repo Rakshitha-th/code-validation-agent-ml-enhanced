@@ -1,0 +1,24 @@
+{
+  "language": "c",
+  "version": 1,
+  "rules": [
+    {
+      "id": "BUG005",
+      "matcher": "unconditional_loop",
+      "category": "bug",
+      "severity": "low",
+      "description": "An unconditional loop may not terminate unless its body exits or throws.",
+      "recommendation": "Verify that the loop has a reachable exit condition.",
+      "subcategory": "control_flow"
+    },
+    {
+      "id": "RES004",
+      "matcher": "unreleased_allocation",
+      "category": "resource",
+      "severity": "high",
+      "description": "A heap allocation has no matching free call in this function and may leak memory.",
+      "recommendation": "Release the allocated pointer on every exit path or use an ownership-aware abstraction.",
+      "subcategory": "memory_lifecycle"
+    }
+  ]
+}

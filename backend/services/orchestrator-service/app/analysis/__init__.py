@@ -1,0 +1,1 @@
+"""Deterministic project-understanding helpers owned by the orchestrator."""

@@ -1,0 +1,60 @@
+{
+  "language": "python",
+  "version": 1,
+  "rules": [
+    {
+      "id": "BUG000",
+      "matcher": "syntax_error",
+      "category": "bug",
+      "severity": "high",
+      "description": "Python syntax errors prevented AST-based bug and resource checks from inspecting this file.",
+      "recommendation": "Fix the syntax error and rerun analysis.",
+      "subcategory": "syntax"
+    },
+    {
+      "id": "BUG001",
+      "matcher": "mutable_default",
+      "category": "bug",
+      "severity": "medium",
+      "description": "A mutable default argument is shared between function calls and may retain state unexpectedly.",
+      "recommendation": "Use None as the default and create a new list, dictionary, or set inside the function.",
+      "subcategory": "mutable_default"
+    },
+    {
+      "id": "BUG002",
+      "matcher": "swallowed_exception",
+      "category": "bug",
+      "severity": "medium",
+      "description": "A broad exception is silently ignored, which can hide failures and leave work incomplete.",
+      "recommendation": "Catch the expected exception types and handle or report the failure explicitly.",
+      "subcategory": "exception_handling"
+    },
+    {
+      "id": "BUG003",
+      "matcher": "return_in_finally",
+      "category": "bug",
+      "severity": "high",
+      "description": "A return in finally can suppress an exception or override an earlier return value.",
+      "recommendation": "Move the return outside the finally block and reserve finally for cleanup.",
+      "subcategory": "exception_handling"
+    },
+    {
+      "id": "RES001",
+      "matcher": "unmanaged_file_open",
+      "category": "resource",
+      "severity": "medium",
+      "description": "A file is opened outside a context manager and may remain open if an error occurs.",
+      "recommendation": "Use `with open(...) as file:` so the file is closed on every exit path.",
+      "subcategory": "file_lifecycle"
+    },
+    {
+      "id": "RES002",
+      "matcher": "unbounded_read",
+      "category": "resource",
+      "severity": "low",
+      "description": "This read loads all available content into memory at once, which can be costly for large inputs.",
+      "recommendation": "Process input incrementally or read a bounded number of bytes or lines.",
+      "subcategory": "memory_usage"
+    }
+  ]
+}

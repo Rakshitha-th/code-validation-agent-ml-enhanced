@@ -1,0 +1,24 @@
+{
+  "language": "go",
+  "version": 1,
+  "rules": [
+    {
+      "id": "BUG005",
+      "matcher": "unconditional_loop",
+      "category": "bug",
+      "severity": "low",
+      "description": "An unconditional loop may not terminate unless its body exits or throws.",
+      "recommendation": "Verify that the loop has a reachable exit condition.",
+      "subcategory": "control_flow"
+    },
+    {
+      "id": "RES003",
+      "matcher": "unbounded_file_read",
+      "category": "resource",
+      "severity": "medium",
+      "description": "This API reads an entire file or stream into memory, which may exhaust memory for large inputs.",
+      "recommendation": "Read the data incrementally or impose an explicit size limit.",
+      "subcategory": "memory_usage"
+    }
+  ]
+}

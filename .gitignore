@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+node_modules/
+dist/
+*.egg-info/
+.pytest_cache/
+data/
+/backend/gateway/*.db
+/backend/evaluation/reports/
+
+gateway.db
+*.tsbuildinfo
+
+backend/gateway/app/GATEWAY_PORT=8010.txt
